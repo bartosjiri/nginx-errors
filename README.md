@@ -9,7 +9,7 @@ A set of custom minimalist 4xx and 5xx error pages for Nginx.
 
 1. Navigate into Nginx's default document directory:
 	```
-    cd /user/share/nginx/html
+    cd /usr/share/nginx/html
     ```
 2. Clone the repository:
 	```
