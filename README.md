@@ -22,9 +22,6 @@ sudo mkdir /usr/share/nginx/nginx-errors
 
 # Copy files to install directory
 sudo cp -r nginx-errors/* /usr/share/nginx/nginx-errors
-
-# Navigate to nginx config dir
-cd /etc/nginx/
 ```
 
 ### 2. Flavor-specific installation steps
@@ -34,6 +31,9 @@ cd /etc/nginx/
 For Debian and other Debian-based systems like Ubuntu, the standard is to have global config in `conf.d/` and reusable snippets in `snippets/`. Run the following commands to create symlinks in these locations:
 
 ```console
+# Navigate to nginx config dir
+cd /etc/nginx/
+
 # Create Debian-style symlink to nginx-errors-global.conf
 sudo ln -s /usr/share/nginx/nginx-errors/nginx-errors-global.conf conf.d/nginx-errors-global.conf
 
@@ -52,6 +52,9 @@ include /etc/nginx/snippets/nginx-errors.conf;
 For Red Hat Enterprise Linux and RHEL-style systems like Fedora, CentOS, Alma Linux, Rocky Linux, etc., the standard is to have global config in `conf.d/` and global vhost defaults in `default.d/`. Run the following commands to create symlinks in these locations:
 
 ```console
+# Navigate to nginx config dir
+cd /etc/nginx/
+
 # Create RHEL-style symlink to nginx-errors-global.conf
 sudo ln -s /usr/share/nginx/nginx-errors/nginx-errors-global.conf conf.d/nginx-errors-global.conf
 
