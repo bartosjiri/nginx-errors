@@ -71,7 +71,7 @@ include /etc/nginx/default.d/*.conf;
 If your configuration doesn't make use `default.d/`, add this to every `server` block in your configuration:
 
 ```nginx
-include /etc/nginx/snippets/default.d/nginx-errors.conf;
+include /etc/nginx/default.d/nginx-errors.conf;
 ```
 
 ### 3. Finish installation
